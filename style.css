@@ -1,0 +1,296 @@
+/* ========================================
+   RESET E STILI BASE
+   ======================================== */
+
+/* Reset universale: elimina margini e padding di default */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family:'NeverMind-Bold';
+    src: url('Tipografia/NeverMind-Bold.ttf');
+    font-weight: bold;
+}
+@font-face {
+    font-family: 'NeverMind-Light';
+    src: url('Tipografia/NeverMind-Light.ttf');
+    font-weight: normal;
+}
+
+
+/* Stili generali del body */
+body {
+    font-family:'NeverMind-Light';
+    background-color: #0d1117;
+    color: #c9d1d9;
+    line-height: 1.6;
+}
+
+/* ========================================
+   HEADER
+   ======================================== */
+
+/* Header con gradiente blu e padding generoso */
+header {
+    background: linear-gradient(180deg, #000000 0%, #388bfd 100%);
+    padding: 60px 20px;
+    text-align: center;
+    border-bottom: 1px solid #30363d;
+}
+
+/* Titolo principale H1 grande e bianco */
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+/* Sottotitolo del header */
+header p {
+    font-size: 1.1em;
+    color: #f0f6fc;
+    font-weight: 300;
+}
+
+/* Badge SDG con background semi-trasparente */
+.sdg-badge {
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 8px 16px;
+    border-radius: 4px;
+    margin-top: 15px;
+    font-size: 0.95em;
+}
+
+/* ========================================
+   NAVIGAZIONE
+   ======================================== */
+
+/* Nav bar con posizione sticky */
+nav {
+    background-color: #161b22;
+    padding: 0;
+    border-bottom: 1px solid #58a6ff;
+    position: sticky; /*Incolla la nav alla parte alta del schermo*/
+    top: 0px; /*Spacing della nav dal schermo*/
+    text-align: center;
+
+}
+
+/* Link di navigazione con hover effect */
+nav a {
+    display: inline-block;
+    padding: 16px 20px;
+    color: #c9d1d9;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+/* Hover effect: colore blu e border bottom */
+nav a:hover {
+    color: #58a6ff;
+    border-bottom-color: #ffffff;
+}
+
+/* ========================================
+   MAIN CONTENT
+   ======================================== */
+
+/* Container principale con max-width */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Sezioni con padding verticale e border */
+section {
+    padding: 60px 0;
+    border-bottom: 1px solid #30363d;
+}
+
+/* Ultima sezione senza border inferiore */
+section:last-child {
+    border-bottom: none;
+}
+
+/* ========================================
+   TIPOGRAFIA - HEADINGS
+   ======================================== */
+
+/* H2: titoli sezioni principali */
+h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+    color: #58a6ff;
+}
+
+/* H3: sottotitoli */
+h3 {
+    font-size: 1.4em;
+    margin: 25px 0 15px 0;
+    color: #58a6ff;
+}
+
+/* Margine top per paragrafi */
+p {
+    margin-top: 20px;
+}
+
+/* ========================================
+   LAYOUT A GRIGLIA
+   ======================================== */
+
+/* Grid 2 colonne responsive */
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+/* ========================================
+   CARD COMPONENT
+   ======================================== */
+
+/* Card con background scuro e border */
+.card {
+    background-color: #161b22;
+    padding: 30px;
+    border-radius: 6px;
+    border: 1px solid #30363d;
+    transition: all 0.2s ease;
+}
+
+/* Hover effect per le card: cambio colore border e shadow */
+.card:hover {
+    border-color: #ececec;
+    background-color: #0d1117;
+    box-shadow: 0 0 100px rgb(88, 166, 255);
+}
+
+/* H3 all'interno di card senza top margin */
+.card h3 {
+    margin-top: 0;
+    color: #58a6ff;
+}
+
+/* ========================================
+   TARGET SECTION (SDG)
+   ======================================== */
+
+/* Box evidenziato per il target 12.5 con border sinistro */
+.target-section {
+    background-color: #161b22;
+    padding: 40px;
+    border-radius: 6px;
+    border-left: 4px solid #cecece;
+    margin: 30px 0;
+}
+
+/* H3 in target section senza top margin */
+.target-section h3 {
+    margin-top: 0;
+    color: #58a6ff;
+}
+
+/* Testo del target in font size aumentato */
+.target-text {
+    font-size: 1.1em;
+    margin: 20px 0;
+}
+
+/* Descrizione del target con colore più tenue */
+.target-description {
+    color: #8b949e;
+    margin-top: 20px;
+}
+
+/* ========================================
+   STATISTICHE
+   ======================================== */
+
+/* Grid per le statistiche */
+.stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin: 30px 0;
+}
+
+/* Singolo item statistico */
+.stat-item {
+    background-color: #161b22;
+    padding: 25px;
+    border-radius: 6px;
+    text-align: center;
+    border: 1px solid #cecece;
+}
+
+/* Numero statistico in blu grande */
+.stat-number {
+    font-size: 2em;
+    color: #58a6ff;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Label sotto il numero */
+.stat-label {
+    color: #8b949e;
+    font-size: 0.95em;
+}
+
+/*LIST ITEMS */
+
+/* Item di lista con padding e border */
+.list-item {
+    padding: 15px 0;
+    border-bottom: 1px solid #30363d;
+}
+
+/* Ultimo item senza border */
+.list-item:last-child {
+    border-bottom: none;
+}
+
+/* Strong tag dentro list-item in blu */
+.list-item strong {
+    color: #58a6ff;
+}
+
+/* FOOTER */
+
+/* Footer con background scuro */
+footer {
+    background: linear-gradient(0deg, #000000 0%, #388bfd 100%);
+    padding: 80px 20px;
+    text-align: center;
+    border-top: 1px solid #30363d;
+    margin-top: 60px;
+}
+
+/* Paragrafi nel footer */
+footer p {
+    color: #ffffff;
+    margin: 10px 0;
+}
+
+/* Testo sorgente nel footer con colore più scuro */
+.footer-source {
+    color: #6e7681;
+    font-size: 0.9em;
+    margin-top: 20px;
+}
+
+/*UTILITY CLASSES */
+
+/* Testo highlight in blu */
+.highlight {
+    color: #58a6ff;
+    font-weight: 500;
+}
