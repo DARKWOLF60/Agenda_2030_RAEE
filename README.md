@@ -76,7 +76,7 @@ Questo sito web illustra l'importanza della corretta gestione dei RAEE e fornisc
 
 - Solonaru Maxim
 - Tucci Giosuè
-- Kevin Srna
+- Kevin Habili
 
 Progetto realizzato per scopi educativi come parte del curriculum di web development e sostenibilità.
 
