@@ -1,7 +1,5 @@
 ![HTML5](https://img.shields.io/badge/HTML5-E34C26?style=flat-square&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)
-![Responsive](https://img.shields.io/badge/Responsive-Design-brightgreen?style=flat-square)
-![Dark Mode](https://img.shields.io/badge/Dark-Mode-black?style=flat-square)
 ![Educational](https://img.shields.io/badge/Educational-Project-blue?style=flat-square)
 ![SDG 12](https://img.shields.io/badge/SDG-12-yellow?style=flat-square)
 ![Status](https://img.shields.io/badge/Status-Active-green?style=flat-square)
