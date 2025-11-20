@@ -5,6 +5,7 @@
 ![Educational](https://img.shields.io/badge/Educational-Project-blue?style=flat-square)
 ![SDG 12](https://img.shields.io/badge/SDG-12-yellow?style=flat-square)
 ![Status](https://img.shields.io/badge/Status-Active-green?style=flat-square)
+![Educational](https://img.shields.io/badge/License-Educational%20Only-blue?style=flat-square)
 
 # RAEE - SDG 12.5 Agenda 2030
 
