@@ -20,13 +20,12 @@
     font-weight: normal;
 }
 
-
 /* Stili generali del body */
 body {
     font-family:'NeverMind-Light';
     background-color: #0d1117;
     color: #c9d1d9;
-    line-height: 1.6;
+    line-height: 22px; /* 1.4em ≈ 22px */
 }
 
 /* ========================================
@@ -35,42 +34,57 @@ body {
 
 /* Header con gradiente blu e padding generoso */
 header {
-    /*background: linear-gradient(180deg, #000000 0%, #388bfd 100%);*/
+    /* background repeat: no-repeat per non farla ripetere */
+    /* background-size: cover per estenderla alla grandezza della pagina */
+    /* background: linear-gradient(180deg, #000000 0%, #388bfd 100%); */
+    
     background-image: url('Immagini/Immagine_Header.jpeg');
-    padding: 60px 20px;
+    padding: 100px 20px;
     text-align: center;
     border-bottom: 1px solid #30363d;
     font-family: NeverMind-Bold;
-    background-position: 10% 10% ;
-    
+    background-position: 10% 10%;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
-
 
 /* Titolo principale H1 grande e bianco */
 header h1 {
-    display: inline-block;
+    display: block;
     background-color: rgba(0, 0, 0, 0.678);
-    padding: 8px 16px;
-    border-radius: 15px;
-    margin-top: 15px;
-    font-size: 40px;
+    padding: 50px 80px;
+    border-radius: 100px;
+    margin: 10px auto;   /* auto per centrare */
+    font-size: 100px;
+    color: white;
+
+    width: fit-content;  /* si adatta al contenuto */
+    text-align: center;  /* testo centrato */
 }
+
 
 /* Sottotitolo del header */
 header p {
-    font-size: 1.1em;
-    color: #000000;
-    font-weight: 300;
+    display: block;
+    background-color: rgba(0, 0, 0, 0.678);
+    padding: 25px 40px;
+    border-radius: 10px;
+    margin: 15px auto;       /* auto per centrare */
+    font-size: 30px;
+    color: #ffffff;
+    
+    width: fit-content;      /* si adatta al contenuto */
+    text-align: center;      /* testo centrato */
 }
 
 /* Badge SDG con background semi-trasparente */
-.sdg-badge {
+.sfondo_sottotitolo {
     display: inline-block;
     background-color: rgba(0, 0, 0, 0.678);
     padding: 8px 16px;
-    border-radius: 4px;
-    margin-top: 15px;
-    font-size: 0.95em;
+    border-radius: 10px;
+    margin-top: 10px;
+    font-size: 20px; /* 0.95em ≈ 15px */
 }
 
 /* ========================================
@@ -80,28 +94,35 @@ header p {
 /* Nav bar con posizione sticky */
 nav {
     background-color: #161b22;
-    padding: 0;
-    border-bottom: 1px solid #58a6ff;
-    position: sticky; /*Incolla la nav alla parte alta del schermo*/
-    top: 0px; /*Spacing della nav dal schermo*/
+    padding: 5px;
+    border-bottom: 2px solid #58a6ff;
+    position: sticky; /* Incolla la nav alla parte alta del schermo */
+    top: 0px; /* Spacing della nav dal schermo */
     text-align: center;
-
 }
 
 /* Link di navigazione con hover effect */
 nav a {
     display: inline-block;
-    padding: 16px 20px;
+    padding: 18px 15px;
     color: #c9d1d9;
     text-decoration: none;
-    border-bottom: 2px solid transparent;
-    transition: all 0.3s ease;
+    border-bottom: 10px solid transparent;
+    border-top: 10px solid transparent;
+    transition: all 0.5s ease;
+    font-size: 25px;
 }
 
 /* Hover effect: colore blu e border bottom */
 nav a:hover {
     color: #58a6ff;
-    border-bottom-color: #ffffff;
+    border-top-color: #58a6ff;
+    border-top-width: 5px;
+
+
+    border-bottom-color: #58a6ff;
+    border-bottom-width: 5px;
+
 }
 
 /* ========================================
@@ -132,14 +153,14 @@ section:last-child {
 
 /* H2: titoli sezioni principali */
 h2 {
-    font-size: 2em;
+    font-size: 32px; /* 2em ≈ 32px */
     margin-bottom: 30px;
     color: #58a6ff;
 }
 
 /* H3: sottotitoli */
 h3 {
-    font-size: 1.4em;
+    font-size: 22px; /* 1.4em ≈ 22px */
     margin: 25px 0 15px 0;
     color: #58a6ff;
 }
@@ -178,7 +199,8 @@ p {
 .card:hover {
     border-color: #ececec;
     background-color: #0d1117;
-    box-shadow: 0 0 100px rgb(88, 166, 255);
+    box-shadow: 0 0 50px rgb(88, 166, 255);
+    transform: scale(1.2);
 }
 
 /* H3 all'interno di card senza top margin */
@@ -194,10 +216,13 @@ p {
 /* Box evidenziato per il target 12.5 con border sinistro */
 .target-section {
     background-color: #161b22;
-    padding: 40px;
+    padding: 20px;
+    font-size: 17px;
     border-radius: 6px;
     border-left: 4px solid #cecece;
-    margin: 30px 0;
+    margin: 30px 30px;
+
+
 }
 
 /* H3 in target section senza top margin */
@@ -208,7 +233,7 @@ p {
 
 /* Testo del target in font size aumentato */
 .target-text {
-    font-size: 1.1em;
+    font-size: 18px; /* 1.1em ≈ 18px */
     margin: 20px 0;
 }
 
@@ -237,23 +262,30 @@ p {
     border-radius: 6px;
     text-align: center;
     border: 1px solid #cecece;
+    transition: all 0.2s ease;
+}
+.stat-item:hover {
+    transform: scale(1.3);
+    box-shadow: 0 0 10px;
 }
 
 /* Numero statistico in blu grande */
 .stat-number {
-    font-size: 2em;
+    font-size: 32px; /* 2em ≈ 32px */
     color: #58a6ff;
     font-weight: bold;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 /* Label sotto il numero */
 .stat-label {
     color: #8b949e;
-    font-size: 0.95em;
+    font-size: 15px; /* 0.95em ≈ 15px */
 }
 
-/*LIST ITEMS */
+/* ========================================
+   LIST ITEMS
+   ======================================== */
 
 /* Item di lista con padding e border */
 .list-item {
@@ -271,34 +303,36 @@ p {
     color: #58a6ff;
 }
 
-/* FOOTER */
+/* ========================================
+   FOOTER
+   ======================================== */
 
-/* Footer con background scuro */
 footer {
-    background: linear-gradient(0deg, #000000 0%, #388bfd 100%);
+    background-image: url(Immagini/Immagine_Sezione_Impatto.jpg);
+    background-position: center bottom;
     padding: 80px 20px;
     text-align: center;
     border-top: 1px solid #30363d;
     margin-top: 60px;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 /* Paragrafi nel footer */
 footer p {
     color: #ffffff;
     margin: 10px 0;
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.678);
+    padding: 8px 16px;
+    border-radius: 15px;
+    margin-top: 15px;
+    font-size: 20px;
 }
 
 /* Testo sorgente nel footer con colore più scuro */
 .footer-source {
-    color: #6e7681;
+    color: #58a6ff;
     font-size: 0.9em;
     margin-top: 20px;
-}
-
-/*UTILITY CLASSES */
-
-/* Testo highlight in blu */
-.highlight {
-    color: #58a6ff;
-    font-weight: 500;
 }
